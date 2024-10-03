@@ -8,7 +8,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - Headlines de noticias financieras de benzinga.com de stocks del NYSE, NASDAQ y otros: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
 
 # Fecha de Recogida:
-- Valores de tickers de stocks: Datos desde el 2012-01-01 al 2020-01-01.
+- Valores de tickers de stocks: Datos desde el 2012-01-01 al 2021-01-01.
 
 - David-Chew-HL/Tech-Stocks-News: Datos desde el 2015-01-01 al 2024-01-29
 
@@ -21,7 +21,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - Headlines de noticias: 2009-02-14 a 2020-06-11
 
 # Formato de los Datos:
-- Valores de tickets de stocks: Archivos CSV, uno por cada ticket denominado con el mismo nombre.
+- Valores de tickets de stocks: Archivos CSV.
 
 - David-Chew-HL/Tech-Stocks-News_train: Archivo CSV.
 
@@ -49,6 +49,9 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 # Descripción de las Variables o Atributos:
 - Valores de tickers de stocks:
     - Date: La fecha del registro.
+
+    Para cada ticker differente tenemos sus variables <ticker\>_<variable\>:
+
     - Open: El precio al que se abrió la acción en esa fecha.
     - High: El precio más alto al que llegó la acción durante el día.
     - Low: El precio más bajo al que llegó la acción durante el día.
