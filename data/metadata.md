@@ -47,7 +47,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - Headlines de noticias: CC0: Public Domain
 
 # Descripción de las Variables o Atributos:
-- Valores de tickets de stocks:
+- Valores de tickers de stocks:
     - Date: La fecha del registro.
     - Open: El precio al que se abrió la acción en esa fecha.
     - High: El precio más alto al que llegó la acción durante el día.
