@@ -1,12 +1,14 @@
 # Fuente de los Datos:
 Origen de los datos (p. ej., sitio web, API, dataset público).
 
-- Valores de tickets de stocks (AMZN, CRM, GOOGL...): Recogidos a través de la librería `yfinance` de Python que use la API de yahoo.
+- Valores de tickers de stocks (AMZN, CRM, GOOGL...): Recogidos a través de la librería `yfinance` de Python que use la API de yahoo.
 
 - David-Chew-HL/Tech-Stocks-News_train.csv, ic-fspml/stock_news_sentiment_*.csv , mjw_stock/market_tweets_train.csv y StephanAkkerman_stock/market-tweets-data_train: Recodigo a través de la libreria `datasets` de Python con conexión a la API de Hugging Face.
 
+- Headlines de noticias financieras de benzinga.com de stocks del NYSE, NASDAQ y otros: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
+
 # Fecha de Recogida:
-- Valores de tickets de stocks: Datos desde el 2021-01-01 al 2024-01-01.
+- Valores de tickers de stocks: Datos desde el 2012-01-01 al 2020-01-01.
 
 - David-Chew-HL/Tech-Stocks-News: Datos desde el 2015-01-01 al 2024-01-29
 
@@ -15,6 +17,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - mjw_stock/market_tweets_train: datos desde el 2015 al 2019
 
 - StephanAkkerman_stock/market-tweets-data_train: datos del año 2020
+
+- Headlines de noticias: 2009-02-14 a 2020-06-11
 
 # Formato de los Datos:
 - Valores de tickets de stocks: Archivos CSV, uno por cada ticket denominado con el mismo nombre.
@@ -27,6 +31,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - StephanAkkerman_stock/market-tweets-data_train: Archivo CSV.
 
+- Headlines de noticias: Dos CSV.
+
 # Licencia de Uso:
 - Valores de tickets de stocks: La librería usada `yfinance` usa licencia Apache 2.0 pero emplea la API publica de yahoo.
 
@@ -37,6 +43,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - mjw_stock/market_tweets_train: Licencia Apache 2.0.
 
 - StephanAkkerman_stock/market-tweets-data_train: Licencia Creative Commons Attribution 4.0
+
+- Headlines de noticias: CC0: Public Domain
 
 # Descripción de las Variables o Atributos:
 - Valores de tickets de stocks:
@@ -74,3 +82,17 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - StephanAkkerman_stock/market-tweets-data_train:
     - created_at: Fecha del tweet
     - text: Contenido del tweet
+ 
+- Headlines de noticias:
+    - raw_partner_headlines.csv:
+      - id: ID del headline
+      - headline: Headline del artículo
+      - url: URL al artículo
+      - publisher: Autor o publicante del artículo
+      - date: Fecha del artículo
+      - stock: Ticker del stock
+    - analyst_ratings_processed.csv:
+      - #: ID del headline
+      - title: Headline del artículo
+      - date: Fecha del artículo
+      - stock: Ticker del stock
