@@ -3,7 +3,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - Valores de tickers de stocks (AMZN, CRM, GOOGL...): Recogidos a través de la librería `yfinance` de Python que use la API de yahoo.
 
-- David-Chew-HL/Tech-Stocks-News_train.csv, ic-fspml/stock_news_sentiment_*.csv , mjw_stock/market_tweets_train.csv y StephanAkkerman_stock/market-tweets-data_train: Recodigo a través de la libreria `datasets` de Python con conexión a la API de Hugging Face.
+- David-Chew-HL/Tech-Stocks-News_train.csv, ic-fspml/stock_news_sentiment_*.csv , mjw_stock/market_tweets_train.csv y StephanAkkerman_stock/market-tweets-data_train: Recodigo a través de la librería `datasets` de Python con conexión a la API de Hugging Face.
 
 - Headlines de noticias financieras de benzinga.com de stocks del NYSE, NASDAQ y otros: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
 
@@ -50,7 +50,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - Valores de tickers de stocks:
     - Date: La fecha del registro.
 
-    Para cada ticker differente tenemos sus variables <ticker\>_<variable\>:
+    Para cada ticker diferente tenemos sus variables <ticker\>_<variable\>:
 
     - Open: El precio al que se abrió la acción en esa fecha.
     - High: El precio más alto al que llegó la acción durante el día.
@@ -61,7 +61,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - David-Chew-HL/Tech-Stocks-News:
     - headline: Titulo del articulo 
-    - date: Fecha de publicacion
+    - date: Fecha de publicación
 
 - ic-fspml/stock_news_sentiment_*:
     - ticker: Ticket del stock que habla el articulo
@@ -69,7 +69,7 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
     - type: Tipo de instrumento financiero (e.g., acciones, fondo mutuo, ETF).
     - sector: Sector de la empresa
     - article_date: Fecha del articulo
-    - article_headline: Titutlo del articulo
+    - article_headline: Título del articulo
     - label: Sentimiento del articulo
 
 - mjw_stock/market_tweets_train:
@@ -77,8 +77,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
     - writer: Autor del tweet
     - post_date: Fecha del tweet
     - body: Cuerpo del tweet
-    - comment_num: Numeros de comentarios
-    - retweet_num: Numeros de retweets
+    - comment_num: Números de comentarios
+    - retweet_num: Números de retweets
     - like_num: Numeros de likes
     - ticker_symbol: Ticker del stock sobre el que se habla en el tweet
 

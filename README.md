@@ -6,7 +6,7 @@ El objetivo de nuestro proyecto es analizar si el partido gobernante puede influ
 
 Queremos comprobar los datos del mandato del Partido Demócrata (presidencia de Barack Obama entre los años 2013 y 2017) y del Partido Republicano (presidencia de Donald Trump entre los años 2017 y 2020).
 
-Para esto se estudiará el mercado bursátil, en concreto acciones del índice NASQAD y el sentimiento en noticias finianceras y tweets de mercado entre los años 2012 al 2020.
+Para esto se estudiará el mercado bursátil, en concreto acciones del índice NASQAD y el sentimiento en noticias financieras y tweets de mercado entre los años 2012 al 2020.
   
 ## Instrucciones para Reproducir los Experimentos:
 
