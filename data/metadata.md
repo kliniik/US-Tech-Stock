@@ -3,9 +3,11 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - Valores de tickers de stocks (AMZN, CRM, GOOGL...): Recogidos a través de la librería `yfinance` de Python que use la API de yahoo.
 
-- David-Chew-HL/Tech-Stocks-News_train.csv, ic-fspml/stock_news_sentiment_*.csv , mjw_stock/market_tweets_train.csv y StephanAkkerman_stock/market-tweets-data_train: Recodigo a través de la librería `datasets` de Python con conexión a la API de Hugging Face.
+- David-Chew-HL/Tech-Stocks-News_train.csv, ic-fspml/stock_news_sentiment_*.csv , mjw_stock/market_tweets_train.csv y StephanAkkerman_stock/market-tweets-data_train: Encontrados en la página web de [huggingface](https://huggingface.co/datasets) y recodigo a través de la librería `datasets` de Python con conexión a la API de Hugging Face.
 
-- Headlines de noticias financieras de benzinga.com de stocks del NYSE, NASDAQ y otros: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
+- Headlines de noticias financieras de benzinga.com de stocks del NYSE, NASDAQ y otros: Descargado de la página kaggle.com el dataset original se puede encontrar [en este link](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests)
+
+- Tweets de mercado con analisis de sentimiento: Obtendios a través de la página oficial de IEEE [en este link](https://ieee-dataport.org/open-access/stock-market-tweets-data)
 
 # Fecha de Recogida:
 - Valores de tickers de stocks: Datos desde el 2012-01-01 al 2021-01-01.
@@ -20,6 +22,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - Headlines de noticias: 2009-02-14 a 2020-06-11
 
+- Tweets de mercado: 2020 09-04-2020 a 19-07-2020
+
 # Formato de los Datos:
 - Valores de tickets de stocks: Archivos CSV.
 
@@ -33,6 +37,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 
 - Headlines de noticias: Dos CSV.
 
+- Tweets de mercado: Archivo CSV.
+
 # Licencia de Uso:
 - Valores de tickets de stocks: La librería usada `yfinance` usa licencia Apache 2.0 pero emplea la API publica de yahoo.
 
@@ -45,6 +51,8 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
 - StephanAkkerman_stock/market-tweets-data_train: Licencia Creative Commons Attribution 4.0
 
 - Headlines de noticias: CC0: Public Domain
+
+- Tweets de mercado: Creative Commons Attribution 4.0
 
 # Descripción de las Variables o Atributos:
 - Valores de tickers de stocks:
@@ -99,3 +107,10 @@ Origen de los datos (p. ej., sitio web, API, dataset público).
       - title: Headline del artículo
       - date: Fecha del artículo
       - stock: Ticker del stock
+
+- Tweets de mercado:
+    - tweets_labelled_09042020_16072020.csv:
+        - id: ID del tweet
+        - created_at: Fecha del tweet
+        - text: Contenido del tweet
+        - sentiment: Sentimiento del tweet
