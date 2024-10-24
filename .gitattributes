@@ -1,3 +1,0 @@
-data/processed/david_check_stock_news_processed.csv filter=lfs diff=lfs merge=lfs -text
-data/processed/mjw_sotck_tweets_cleaned.csv filter=lfs diff=lfs merge=lfs -text
-data/processed/stepahnakkerman_tweets_cleaned.csv filter=lfs diff=lfs merge=lfs -text
