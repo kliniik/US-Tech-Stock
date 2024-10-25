@@ -7,7 +7,7 @@
   - Finalmente, se reseteó el index de igual manera que en **raw_partner_headlines.csv**
 
  
-- **tweets_remaining_09042020_16072020.csv** y **tweets_labelled_09042020_16072020.csv**:
+**tweets_remaining_09042020_16072020.csv** y **tweets_labelled_09042020_16072020.csv**:
 
 El proceso de limpieza fue similar para ambos archivos. Empecé con **tweets_labelled_09042020_16072020.csv** y al analizar los valores nulos me di cuenta de que la mayor parte de la columna *"sentiment »* estaba vacía. Decidí eliminarla por completo. Después he añadido el archivo **tweets_remaining_09042020_16072020.csv** al repositorio. No lo envié en primer lugar solo porque le faltaba la columna *"sentiment »*. Como decidimos realizar el análisis de sentimiento más tarde, opté por utilizar los archivos tal cual.
 
