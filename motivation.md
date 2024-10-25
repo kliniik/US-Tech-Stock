@@ -3,6 +3,8 @@ Comprobar si existió alguna diferencia entre el comportamiento de los valores e
 
 # Preguntas de Investigación o Hipótesis
 Detallar las preguntas o hipótesis que se pretende explorar o validar mediante el análisis de los datos preparados.
+- Las empresas del indice NASQAD se comportaron de forma distinta en bolsa durante la presidencia de Obama comparada con la de Trump.
+- El sentimiento de las noticias y tweets relacionados con los stocks del indice NASDAQ fue diferente en la presidencia de Obama comparada con la de Trump.
 
 # Justificación de los Datos Seleccionados
 Los datos obtenidos son, por una parte, series temporales de datos financieros (los valores en bolsa de los stocks) y, por otra, datos no estructurados (texto) relativo a estos stocks, ya sean títulos de noticias o tweets obtenidos mediante webscraping.

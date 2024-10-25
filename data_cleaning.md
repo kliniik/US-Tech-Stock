@@ -1,7 +1,44 @@
-**raw_partner_headlines.csv:**
+# Descripción de los métodos utilizados para la limpieza de datos y justificación de las decisiones tomadas durante el proceso de limpieza.
+
+## Valores de tickers de stocks (NASQAD_stock_data_processed.csv)
+
+- Se ha comprobado que los datos recogidos son los correctos en cuanto al rango de fechas que describen, teniendo en cuenta el cierre del mercado de inversiones en festivos Estadounidenses y fines de semana.
+- Se han descartado todos aquellos tickers de los cuales no se tuviera la muestra completa en el rango de fechas estudiado, reduciendo así la muestra de 2967 tickers a 1149. Se considera que aunque la cantidad de tickers se pierden es considerable, contar con la serie temporal original ininterrumpida puede ser de mayor utilidad.
+- Se ha filtrado las columnas para obtener solo los precios ajustados de los stocks. Estos precios reflejan de mejor forma el valor real en mercado al ajustar los precios por diversos factores como dividendos, splits, etc.
+- Se ha cambiado el tipo de los datos para sean acorde a las columnas (fechas para "date", enteros para "volume" y punto flotante para los valores de los stocks).
+
+## David-Chew-HL/Tech-Stocks-News (david_check_stock_news_processed_part1.csv y part2) 
+
+- No hay valores faltantes en ninguna de las columnas.
+- Se analizó si los titulares estan duplicados. Se encontró una gran cantidad de filas duplicadas, es decir que el mismo titular se ha publicado en el mismo día. Al analizar si tambien se duplicaba el titular en diferentes días, se enontraron solo 17 ejemplos. Se procedió a eliminar todas las filas duplicadas que estuvieran en mismos días. Esto se realizó bajo la premisa de que si se han publicado en diferentes días, la noticia puede tener mayor o menor relevancia que si se publica en el mismo día.
+
+
+## ic-fspml/stock_news_sentiment (ic-fspml_stock_news_sentiment_processed.csv)
+
+- Se comprobaron los valores faltantes. Se observó como los valores faltantes aparecían en la columna "name" que representa el nombre de la compañía de la que se trata el ticker. Se analizó como esto ocurre para los mismos tickers en todas las ocasiones así que se deja como están.
+- Se observaron NANs también en la columna "sector" que repsenta el sector de la compañía. Como más adelante filtraremos los tickers que buscamos no se realizó ninguna acción sobre ella.
+- Filtramos los datos por los tickers que estamos investigando y el rango de fechas que queremos.
+
+## mjw_stock/market_tweets_train (mjw_sotck_tweets_cleaned_part1.csv y part2 y 3)  
+
+- Este conjunto de datos tenía NANs en la columna "writer" que representa el autor del tweet. Como no es de mayor utilidad esta columna se mantuvieron las filas con NAN.
+- Las demás columnas parecen correctas. Se comprobo que no hubiera tweets repetidos ni filas duplicadas.
+
+## StephanAkkerman_stock/market-tweets-data_train (stepahnakkerman_tweets_cleaned_part1.csv y part2)
+
+- No se encuentran valores faltantes en ninguna de las columnas.
+- Se comprobó la duplicidad de los datos. Se encontró una gran cantidad de tweets duplicados pero al analizar si se duplicaban en el mismo día la cantidad se redujo mucho. Esto es, un mismo tweet se publica mas de una vez pero en diferentes días. Se cree que el impacto que puede tener un tweet duplicado es pequeño pero se mantuvo los tweets duplicados que estuvieran en diferentes días mientras que se eliminaron los que estuvieran en el mismo día.
+- Los datos entran todos en el rango de fechas que queremos asi que nos quedamos con todas las filas.
+
+
+## raw_partner_headlines.csv
   - El único cambio realizado fue, con pandas, renombrar la columna "Unnamed: 0" a "index", cambiar sus valores para que vayan del 0 al n-1, siendo n el número de filas, y asignarlo como índice del dataset. No había ningún NA en ninguna de las columnas.
 
-**analyst_ratings_processed:**
-  - En este dataset sí había NAs, pero no por datos incompletos, sino porque algunas filas se habían dividido en dos, teniendo en estas filas el índice y el título de la noticia pero su fecha y ticker de stock correspondiente en la siguiente fila en las columnas *title* y *date*. Por ejemplo: ![image](https://github.com/user-attachments/assets/c57a60ae-d058-4905-9c67-aae58e5fed31)
+## analyst_ratings_processed
+  - En este dataset sí había NAs, pero no por datos incompletos, sino porque algunas filas se habían dividido en dos, teniendo en estas filas el índice y el título de la noticia pero su fecha y ticker de stock correspondiente en la siguiente fila en las columnas *title* y *date*. Por ejemplo: ![image](assets\imgs\data_clean_analyst_ratings_processed.png)
   - Por lo tanto, con pandas se creó una copia del dataframe y se iteró por las filas, comprobando si había algún NA. En caso de que hubiera un NA en la fila x, se cogieron los valores de las columnas *title* y *date* de la fila x+1, se metían en las columnas *date* y *stock* de la fila x y se eliminaba la fila x+1. En total solo ocurrió esto en 1289 filas.
   - Finalmente, se reseteó el index de igual manera que en **raw_partner_headlines.csv**
+
+
+## Dataset final conjunto
+  - Para juntar los datasets procesados se ha optado por crear un dataframe donde cada fila representa un dia, desde el inicio de rango de fechas de observación hasta el último día. Así cada columna representa
