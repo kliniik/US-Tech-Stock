@@ -60,4 +60,25 @@ Más tarde, me di cuenta de que, debido a que algunos textos contienen punto y c
 
 
 ## Dataset final conjunto
-  - Para juntar los datasets procesados se ha optado por crear un dataframe donde cada fila representa un dia, desde el inicio de rango de fechas de observación hasta el último día. Así cada columna representa
+  - Para juntar los datasets procesados se ha optado por crear un dataframe donde cada fila representa un dia, desde el inicio de rango de fechas de observación hasta el último día. Así cada columna representa un ticker que se está investigando y contiene un diccionario en formato string en el cual tiene el sigueinte formato:
+
+  ```python
+  {
+    "val_adj_close": <VALOR AJUSTADO DEL TICKER>,
+    "noticias": [
+      {
+        "noticia": <TEXTO DE LA NOTACIA>,
+        "sentimiento": <SENTIMENTO DE LA NOTACIA>
+      },
+      {
+        "noticia": <TEXTO DE LA NOTACIA>,
+        "sentimiento": <SENTIMENTO DE LA NOTACIA>
+       },
+      ...
+    ]
+  }
+  ```
+
+  De esta manera creemos que podemos trabajar con un conjunto de datos que tiene toda la informacion requerida para un dia y un ticker de forma accesible, otras opciones serían trabajar con el join de todos los conjuntos de datos en base a su fecha pero esto nos generaria un dataframe con miles de columans de las cuales la gran mayoría estarían vacías.
+
+  Debido a limites de Github hemos tenido que dividir el dataset en 10 partes para que ninguna de ellas supere el limite de 100MB por archivo.
