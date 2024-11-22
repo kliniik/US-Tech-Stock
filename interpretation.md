@@ -50,9 +50,15 @@ Tras probar con toda la muestra durante horas y no tener éxito, se optó por in
 Por último, se estableció un num_topics de 5, al igual que en el LDA, y una chain_variance de 0.100. Dado que los tópicos en el ámbito financiero pueden tener gran varianza y ser espontáneos, se escogió un valor 20 veces mayor (0.100) que el valor por defecto de la librería (0.005).
 
 # Tecnica 3: Análisis de sentimiento
+## Descripción de técnicas utilizadas
+Se usó una técnica de análisis de sentimientos. Para esto se usó un modelo fine-tuned que usa LLama 2 como base y que refinado con datos financieros para hacer análisis de sentimientos.
 
-Descripción de las Técnicas Utilizadas: Explicación detallada de cada técnica de minería de datos empleada.
+Para obtener el sentimiento de cada noticia de nuestro dataset se le pasó un prompt al modelo dándole instrucciones para que a partir del titular de la noticia responda con neutral, positive o negative dependiendo del sentimiento del titular.
 
-Justificación de la Selección de Técnicas: Por qué se eligieron esas técnicas en función de los objetivos del proyecto y la naturaleza de los datos.
+https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis
 
-Configuración de los Algoritmos: Parámetros utilizados, herramientas, y librerías aplicadas.
+## Justificación de la selección de técnicas
+Se eligió esta técnica porque es la más ideal para la naturaleza de los titulares de noticias (texto) y el objetivo del proyecto (descubrir si el sentimiento general de los titulares de noticias financieras publicadas en benzinga.com fue más positivo durante la presidencia de Obama que durante la de Trump)
+
+## Configuración de los algoritmos
+El notebook que hace el fine-tuning de LLama 2 usa pytorch, transformers, peft y pandas como principales librerías. Todos los parámetros de entrenamiento se pueden encontrar en el notebook en la celda con número de ejecución 15.
