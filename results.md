@@ -67,3 +67,16 @@ Esta es la distribucion de los topicos en el corpus:
 
 Se observa como todos los topicos tienen parecida distribucion en el corpus, teniendo el topico 4 un poco más de peso que los demás y el 0 un poco menos.
 # Tecnica 3: Análisis de sentimiento
+Tras realizar el análisis de sentimientos, visualizamos los datos para interpretar mejor los resultados. El código se incluye en el cuaderno *results_for_sentiment_analysis.ipynb*.
+
+El primer gráfico muestra la distribución de los sentimientos a lo largo de los años. 
+
+![Sentiment Analysis over years](assets/imgs/sentiment_over_years.png)
+
+Se puede observar que nuestro conjunto de datos está desequilibrado, ya que hay muy pocos datos de los años 2012-2014 en comparación con los años siguientes. También podemos observar que la gran mayoría de los datos tienen un sentimiento neutro.
+
+Luego, para visualizarlo mejor, dividimos los datos en dos periodos electorales: 2012-2016, cuando Obama era el presidente, y 2017-2020, cuando lo era Trump. 
+
+![Sentiment Analysis over electoral periods](assets/imgs/sentiment_over_electoral_periods.png)
+
+De nuevo, la mayoría de los datos son neutrales. Podemos observar que, mientras que durante el periodo demócrata la cantidad de datos negativos y positivos era similar, definitivamente hay más datos negativos durante el periodo republicano.
