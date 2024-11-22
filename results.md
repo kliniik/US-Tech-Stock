@@ -69,12 +69,14 @@ Se observa como todos los topicos tienen parecida distribucion en el corpus, ten
 # Tecnica 3: Análisis de sentimiento
 Tras realizar el análisis de sentimientos, visualizamos los datos para interpretar mejor los resultados. El código se incluye en el cuaderno *results_for_sentiment_analysis.ipynb*.
 
+## Análisis del sentimiento a lo largo de los años:
 El primer gráfico muestra la distribución de los sentimientos a lo largo de los años. 
 
 ![Sentiment Analysis over years](assets/imgs/sentiment_over_years.png)
 
 Se puede observar que nuestro conjunto de datos está desequilibrado, ya que hay muy pocos datos de los años 2012-2014 en comparación con los años siguientes. También podemos observar que la gran mayoría de los datos tienen un sentimiento neutro.
 
+## Análisis del sentimiento a lo largo de los periodos electorales
 Luego, para visualizarlo mejor, dividimos los datos en dos periodos electorales: 2012-2016, cuando Obama era el presidente, y 2017-2020, cuando lo era Trump. 
 
 ![Sentiment Analysis over electoral periods](assets/imgs/sentiment_over_electoral_periods.png)
