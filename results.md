@@ -117,11 +117,12 @@ Como resultado de la aplicación de modelos temporales a los datos de la bolsa d
 ![ARIMAX Apple Stock](assets/imgs/Apple_ARIMAX.png)
 ![ARIMAX Apple Stock enclosed](assets/imgs/Apple_ARIMAX_enclosed.png)
 
+### MAX aplicado a los valores de bolsa
+![MAX Apple Stock](assets/imgs/Apple_MAX_stock.png)
+![MAX Apple Stock enclosed](assets/imgs/Apple_MAX_stock_enclosed.png)
+
 ### MAX aplicado al sentimiento
 ![MAX Sentiment](assets/imgs/Apple_MAX_sentiment.png)
 ![MAX Sentiment enclosed](assets/imgs/Apple_MAX_sentiment_enclosed.png)
 
-### MAX aplicado a los valores de bolsa
-![MAX Apple Stock](assets/imgs/Apple_MAX_stock.png)
-![MAX Apple Stock enclosed](assets/imgs/Apple_MAX_stock_enclosed.png)
 
