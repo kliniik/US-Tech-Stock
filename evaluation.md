@@ -46,16 +46,20 @@ Como limitación, cabe destacar que debido a la cantidad de datos manejados y la
 # Tecnica 5: Modelado de Series Temporales
 ## Descripción de las Métricas Utilizadas
 
-MAE (Error Absoluto Medio)  
+**MAE (Error Absoluto Medio)**  
+
 El MAE mide el promedio de los errores absolutos entre los valores predichos y los valores reales. Es útil porque proporciona una idea clara de la magnitud promedio de los errores en la misma unidad que los datos. En nuestro caso, ayuda a evaluar cuánto difieren los valores predichos de los precios reales de las acciones o del sentimiento.
 
-RMSE (Raíz del Error Cuadrático Medio)  
+**RMSE (Raíz del Error Cuadrático Medio)**  
+
 El RMSE es similar al MAE, pero penaliza más los errores grandes al elevarlos al cuadrado antes de promediarlos. Esto lo hace especialmente útil para detectar modelos que pueden tener problemas con valores atípicos o grandes desviaciones. Nos ayuda a identificar modelos que predicen consistentemente bien, incluso en situaciones desafiantes.
 
-Prueba de Dickey-Fuller  
+**Prueba de Dickey-Fuller**  
+
 Esta prueba verifica si los datos son estacionarios. Aunque sabemos que los valores de la bolsa no son estacionarios, utilizamos esta prueba para confirmar que los valores de cierre de las acciones de Apple tampoco son estacionarios.
 
 Correlación de Pearson  
+
 Mide la fuerza y dirección de la relación lineal entre dos variables, en este caso, entre el sentimiento de las noticias y los precios de las acciones. Esto es importante para analizar si los cambios en una variable están relacionados con cambios en la otra.
 
 
@@ -81,11 +85,14 @@ El coeficiente r≈0 de correlación de Pearson muestra que la relación entre e
 
 ## Limitaciones en la Evaluación
 
-Disponibilidad de datos  
+**Disponibilidad de datos**  
+
 Los datos iniciales de 2012 a 2015 no contienen noticias relevantes, y los datos de sentimiento se vuelven dispersos durante la pandemia (2020). Esto dificulta la creación de modelos consistentes.
 
-Baja correlación  
+**Baja correlación**  
+
 Aunque la relación entre el sentimiento y los precios es significativa, su fuerza es muy baja. Esto limita la aplicabilidad de modelos que asuman una conexión directa entre ambas variables.
 
-Impacto de eventos externos  
+**Impacto de eventos externos**
+
 La pandemia de COVID-19 causó caídas significativas en los precios de las acciones, pero estas no están relacionadas directamente con el sentimiento, ni con la politica de EEUU, complicando las interpretaciones.
