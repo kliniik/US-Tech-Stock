@@ -69,3 +69,14 @@ Se eligió esta técnica porque es la más ideal para la naturaleza de los titul
 
 ## Configuración de los algoritmos
 El notebook que hace el fine-tuning de LLama 2 usa pytorch, transformers, peft y pandas como principales librerías. Todos los parámetros de entrenamiento se pueden encontrar en el notebook en la celda con número de ejecución 15.
+
+# Tecnicas 4: Filtro de Hampel
+
+## Descripción de la Técnica:
+El filtro de Hampel es un método robusto para detectar y reemplazar valores atípicos en una serie de tiempo. Consiste en calcular la mediana de una ventana deslizante de tamaño fijo y comparar cada valor de la serie con la mediana. Si la diferencia entre el valor y la mediana es mayor que un umbral multiplicado por la desviación estándar de la serie, el valor se considera un valor atípico y se reemplaza por la mediana.
+
+## Justificación de la Técnica:
+El filtro de Hampel es una técnica robusta y eficiente para detectar valores atípicos en series de tiempo, lo cual es relevante para el análisis de datos financieros. Este filtro permite obtener una serie de puntos donde por alguna razón el mercado reaccionó de manera inusual, lo cual puede ser relevante la identificación de eventos importantes.
+
+## Configuración del Algoritmo:
+Para implementar el filtro de Hampel se utilizó la librería `pyhampel` de Python, que proporciona una implementación eficiente de este método. Se configuró la ventana a un tamaño de 10, lo cual permite detectar valores atípicos en función de los 5 valores anteriores y los 5 valores posteriores a cada punto de la serie. El umbral se estableció en 3 desviaciones estándar, lo cual es el valor por defecto de la librería y es un umbral comúnmente utilizado.
