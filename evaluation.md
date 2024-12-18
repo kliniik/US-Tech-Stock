@@ -40,3 +40,5 @@ La gráfica de coherencia de tópicos a lo largo del tiempo es la siguiente:
 ![Coherence Score DTM](assets/imgs/DTM_Coherences_Overtime_v2.png)
 
 En este caso, el modelo DTM obtuvo un coherence score en torno al 0.5, aunque está métrica fue decreciendo a lo largo del tiempo. Esto sugiere que los tópicos generados por el modelo DTM son moderadamente coherentes, pero que la coherencia disminuye a medida que avanzamos en el tiempo.
+
+Como limitación, cabe destacar que debido a la cantidad de datos manejados y la complejidad del modelo DTM, el tiempo de entrenamiento y evaluación del modelo se realizó sobre una muestra aleatoria simple de 1000 noticias. Esto puede afectar a como de representativos son los tópicos generados y por lo tanto las métricas obtenidas.
