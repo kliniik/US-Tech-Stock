@@ -80,7 +80,13 @@ Esto sugiere que incluir el sentimiento como variable exógena mejora la capacid
 Resultados de la Prueba Dickey-Fuller (p = 0.999) confirma que los datos no son estacionarios, lo cual era esperado dada la naturaleza de los precios de las bolsa.
 Estadístico ADF = 2,43 (mayor que los valores críticos): No se rechaza la hipótesis nula de no estacionariedad.
 
-El coeficiente r≈0 de correlación de Pearson muestra que la relación entre el sentimiento y los precios de las acciones es débil, lo que sugiere que el sentimiento tiene una influencia limitada.
+Correlación de Pearson 
+
+- Correlación entre todos los datos
+![Pearson Test Results](assets/imgs/pearson_test.png)
+
+- Correlación entre los mejores valores de bolsa con los mejores valores de sentimiento y al revez
+![Good-Bad Pearson Test Results](assets/imgs/pearson_good_bad.png)
 
 
 ## Limitaciones en la Evaluación
