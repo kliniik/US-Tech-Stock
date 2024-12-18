@@ -104,3 +104,24 @@ Luego, para visualizarlo mejor, dividimos los datos en dos periodos electorales:
 ![Sentiment Analysis over electoral periods](assets/imgs/sentiment_over_electoral_periods.png)
 
 De nuevo, la mayoría de los datos son neutrales. Podemos observar que, mientras que durante el periodo demócrata la cantidad de datos negativos y positivos era similar, definitivamente hay más datos negativos durante el periodo republicano.
+
+# Tecnica 5: Modelado de Series Temporles
+
+Como resultado de la aplicación de modelos temporales a los datos de la bolsa de Apple y al sentimiento de las noticias, hemos obtenido los siguientes gráficos:
+
+### Predicciones con ARIMA
+![ARIMA Apple Stock](assets/imgs/Apple_ARIMA.png)
+![ARIMA Apple Stock enclosed](assets/imgs/Apple_ARIMA_enclosed.png)
+
+### Predicciones con ARIMAX
+![ARIMAX Apple Stock](assets/imgs/Apple_ARIMAX.png)
+![ARIMAX Apple Stock enclosed](assets/imgs/Apple_ARIMAX_enclosed.png)
+
+### MAX aplicado al sentimiento
+![MAX Sentiment](assets/imgs/Apple_MAX_sentiment.png)
+![MAX Sentiment enclosed](assets/imgs/Apple_MAX_sentiment_enclosed.png)
+
+### MAX aplicado a los valores de bolsa
+![MAX Apple Stock](assets/imgs/Apple_MAX_stock.png)
+![MAX Apple Stock enclosed](assets/imgs/Apple_MAX_stock_enclosed.png)
+
