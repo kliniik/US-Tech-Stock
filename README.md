@@ -14,8 +14,14 @@ Queremos comprobar si el partido gobernante puede influir principalente en los v
   
 ## Instrucciones para Reproducir los Experimentos:
 
-No aplica de momento.
-
+- Encontrar datos en el NASDAQ, quizá tweets o noticias financieras y datos bursátiles relevantes.
+- Filtrar los datos a los periodos de tiempo pertinentes durante la presidencia de cada candidato.
+- Formular hipótesis adecuadas.
+- Realizar el preprocesamiento correspondiente y crear un nuevo conjunto de datos, con el valor de cierre de la bolsa, las noticias sobre las empresas en cuestión y el sentimiento correspondiente asignado a las noticias.
+- Aplicar técnicas de minería de datos como LDA, análisis de sentimientos y análisis de series temporales.
+- Comprobar si los cambios en el sentimiento de la bolsa y las noticias están relacionados con acontecimientos importantes en el mundo de la política estadounidense.
+- Extraer conclusiones a partir de los resultados obtenidos como consecuencia de la minería de datos, consultar si se cumplen las hipótesis.
+  
 ## Dependencias y Entorno: 
 
 Las librerías requeridas para recolectar los datos se encuentran en `data/requirements_data_recollection.txt` principalmente se ha usado la librería `yfinance`, `huggingface_hub` y `datasets` de Python.
