@@ -18,6 +18,7 @@ El texto se preprocesó siguiendo los siguientes pasos:
 - Se tokeniza el texto.
 - Todos los tokens considerados "stopwords" segun la lista del ingles del paquete `nltk` se eliminan.
 - Todos los tokens con longitud menor a 3 se eliminan.
+- Todos los tokens que sean un ticker que se esté analizando se elimina.
 - Los token resantes se lematizan.
 
 Los hiperparámetros probados son:
