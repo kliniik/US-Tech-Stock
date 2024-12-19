@@ -102,3 +102,35 @@ Aunque la relación entre el sentimiento y los precios es significativa, su fuer
 **Impacto de eventos externos**
 
 La pandemia de COVID-19 causó caídas significativas en los precios de las acciones, pero estas no están relacionadas directamente con el sentimiento, ni con la politica de EEUU, complicando las interpretaciones.
+
+# Tecnica 6: Comparación de medias
+## Descripción de las Métricas Utilizadas
+
+**p-valor**
+
+El p-valor nos indica si aceptamos o descartamos la hipótesis nula (hay una diferencia significativa en las medias). Con un valor inferior a 0.05 podemos aceptar la hipótesis con un intervalo de confianza del 95%.
+
+
+## Resultados de las Evaluaciones
+
+Comparación de la variación diaria media de los valores bursátiles se obtienen los siguientes resultados:
+
+ - Periodo Obama/periodo Trump: El test de Welch devuelve un p-valor de 0.772. Se rechaza la hipótesis nula.
+ - Periodo Obama/periodo Trump hasta la pandemia: El test de Welch devuelve un p-valor de 0.631. Se rechaza la hipótesis nula.
+
+Comparación del sentimiento medio de las noticias y tweets:
+
+ - Periodo Obama/periodo Trump: El test de Welch devuelve un p-valor de 5.941e-12. Se acepta la hipótesis nula.
+ - Periodo Obama/periodo Trump hasta la pandemia: El test de Welch devuelve un p-valor de 9.81e-42. Se acepta la hipótesis nula.
+
+Se concluye, por tanto, que sí existe evidencia suficiente como para afirmar que el sentimiento medio de las noticias y tweets durante el periodo Obama es distinto, y más positivo, a las del periodo Trump, incluyendo y excluyendo el periodo de pandemia.
+
+Asimismo, no existe evidencia suficiente como para afirmar que la variación diaria media sea distinta en los dos periodos.
+
+Por lo tanto, se puede afirmar que, mientras que las empresas analizadas se comportaron de manera similar en la bolsa durante ambos periodos, las noticias y tweets relacionados con estas empresas tuvo un sentimiento más positivo (o menos negativo) durante el periodo Obama comparado con el periodo Trump.
+
+## Limitaciones en la Evaluación
+
+**Simplicidad del test**  
+
+La agrupación de los datos y el test de Welch permiten hacer una comparación sencilla e ilustrativa, pero no es la más adecuada para la naturaleza de los datos, ya que hay muchos factores externos que afectan a los datos y que no se ven representados en métricas como la media y la varianza.
