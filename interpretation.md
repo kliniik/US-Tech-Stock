@@ -46,9 +46,13 @@ No se han notado cayos relacionados con la presidencia de Donald Trump (lineas r
 
 ## Visualizaciones
 
-![bolsa](assets/imgs/plot_evolucion_bolsa_porcentaje.png)
+![bolsa_trump](assets/imgs/plot_evolucion_bolsa_trump_porcentaje.png)
 
-![sentimiento](assets/imgs/plot_evolucion_sentimientos.png)
+![sentimiento_trump](assets/imgs/plot_evolucion_sentimientos_trump.png)
+
+![bolsa_obama](assets/imgs/plot_evolucion_bolsa_obama_porcentaje.png)
+
+![sentimiento_obama](assets/imgs/plot_evolucion_sentimientos_obama.png)
 
 
 ## Relación con las Preguntas de Investigación
