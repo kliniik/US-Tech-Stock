@@ -91,3 +91,14 @@ Los modelos elegidos son ampliamente utilizados en análisis financieros debido 
 
 ## Configuración del Algoritmo:
 Usamos las librerías statsmodels y pmdarima para implementar los modelos y evaluar métricas como MAE y RMSE, que sirvieron para comparar el desempeño de los distintos enfoques. En cuanto a los parámetros p, d y q, utilizamos la función auto_arima para determinar el modelo óptimo.
+
+# Tecnica 6: Comparación de medias
+
+## Descripción de la Técnica:
+Para comprobar si existe alguna diferencia entre los valores medios de la variación diaria de los valores bursátiles de las empresas seleccionadas y el sentimiento de las noticias y tweets seleccionados, se empleó el test de Welch.
+
+## Justificación de la Técnica:
+Debido a que el número de muestras para ambos periodos es significante y las varianzas no son iguales, para realizar una comparación de medias el test de Welch es el más idóneo. Analizando el p-valor del test podemos aceptar o descartar la hipótesis de que las medias son diferentes en los dos periodos.
+
+## Configuración del Algoritmo:
+Se usó la función ttest_ind de scipy.stats, a la que se le pasaron ambos conjuntos de datos y se indicó que las varianzas no son iguales con equal_var=False, para usar el test de Welch.

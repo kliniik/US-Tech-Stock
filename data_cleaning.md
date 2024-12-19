@@ -40,23 +40,13 @@
   - Finalmente, se reseteó el index de igual manera que en **raw_partner_headlines.csv**
 
  
-**tweets_remaining_09042020_16072020.csv** y **tweets_labelled_09042020_16072020.csv**:
+## **tweets_remaining_09042020_16072020.csv** y **tweets_labelled_09042020_16072020.csv**:
 
 El proceso de limpieza fue similar para ambos archivos. Empecé con **tweets_labelled_09042020_16072020.csv** y al analizar los valores nulos me di cuenta de que la mayor parte de la columna *"sentiment »* estaba vacía. Decidí eliminarla por completo. Después he añadido el archivo **tweets_remaining_09042020_16072020.csv** al repositorio. No lo envié en primer lugar solo porque le faltaba la columna *"sentiment »*. Como decidimos realizar el análisis de sentimiento más tarde, opté por utilizar los archivos tal cual.
 
 Al principio, analicé el número de valores NaN en cada columna. Como sólo la columna *"sentimiento"* estaba parcialmente vacía, no tuve que hacer más limpieza. A continuación, analicé los tweets y extraje los tickers de bolsa de la columna *"texto"* utilizando la biblioteca *yfinance*. Me di cuenta de que hay muchos tweets que contienen una referencia a más de un ticker. Por eso decidí explotar los dataframes, para que cada ticker tuviera su propia fila. 
 
 Más tarde, me di cuenta de que, debido a que algunos textos contienen punto y coma (**";"**) e indicadores de nueva línea (**"\n"**), la estructura del dataframes se destruye. Decidí sustituir el punto y coma por una coma (**","**) y las nuevas líneas por espacios (**" "**). Después, he filtrado los datos para que solo contengan tickers de NASDAQ. Al final, he guardado los dataframes limpios en los archivos **tweets_remaining_cleared.csv** y **tweets_labelled_cleared.csv**. 
-
- 
-**tweets_remaining_09042020_16072020.csv** y **tweets_labelled_09042020_16072020.csv**:
-
-El proceso de limpieza fue similar para ambos archivos. Empecé con **tweets_labelled_09042020_16072020.csv** y al analizar los valores nulos me di cuenta de que la mayor parte de la columna *"sentiment »* estaba vacía. Decidí eliminarla por completo. Después he añadido el archivo **tweets_remaining_09042020_16072020.csv** al repositorio. No lo envié en primer lugar solo porque le faltaba la columna *"sentiment »*. Como decidimos realizar el análisis de sentimiento más tarde, opté por utilizar los archivos tal cual.
-
-Al principio, analicé el número de valores NaN en cada columna. Como sólo la columna *"sentimiento"* estaba parcialmente vacía, no tuve que hacer más limpieza. A continuación, analicé los tweets y extraje los tickers de bolsa de la columna *"texto"* utilizando la biblioteca *yfinance*. Me di cuenta de que hay muchos tweets que contienen una referencia a más de un ticker. Por eso decidí explotar los dataframes, para que cada ticker tuviera su propia fila. 
-
-Más tarde, me di cuenta de que, debido a que algunos textos contienen punto y coma (**";"**) e indicadores de nueva línea (**"\n"**), la estructura del dataframes se destruye. Decidí sustituir el punto y coma por una coma (**","**) y las nuevas líneas por espacios (**" "**). Después, he filtrado los datos para que solo contengan tickers de NASDAQ. Al final, he guardado los dataframes limpios en los archivos **tweets_remaining_cleared.csv** y **tweets_labelled_cleared.csv**. 
-
 
 
 ## Dataset final conjunto
