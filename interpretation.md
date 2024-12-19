@@ -16,9 +16,17 @@ Ejemplos de esto son:
 | Fecha       | Diferencia         | Razón                                                                 | Referencia |
 |-------------|--------------------|-----------------------------------------------------------------------|------------|
 | 2012-08-09  | 1.360670e+11       | Overperformed: Central bank action to help economy. Lower jobless rates in the US. | [Fuente](https://www.benzinga.com/news/12/08/2819781/market-wrap-for-august-9-2012) |
+|2019-07-09   |	2.173705e+04	   | Overperformed The market overperformed that day because stronger-than-expected jobs data led to lower expectations for a Fed rate cut, which boosted investor sentiment despite the general market decline.| [Fuente](https://www.nasdaq.com/articles/stock-market-news-for-jul-9-2019-2019-07-09)
 
 # LDA y DTM: Los temas dominantes en las noticias financieras durante la presidencia de Obama están más enfocados en la recuperación económica post-crisis de 2008, mientras que los temas dominantes durante la presidencia de Trump están más relacionados con conflictos comerciales y políticas proteccionistas.
 
+En el mandato de Obama:
+Aunque algunos tópicos mencionan términos relacionados con el mercado de valores, como "earnings", "stock", "buy", y términos técnicos como "eps" y "report", no se identifican explícitamente referencias claras a temas de recuperación económica post-crisis de 2008. Como podrian ser terminos como "recovery", "crisis", "bailout", "stimulus", o "unemployment". Los tópicos parecen enfocarse más en la evolución general del mercado financiero y en empresas específicas (como Apple, Tesla, y Amazon).
+
+Durante el mandato de Trump:
+No se observa en el análisis evidencia de palabras relacionadas directamente con conflictos comerciales, tarifas, o políticas proteccionistas. Aunque aparecen términos como "trade" y "deal" en el Tópico 4, no se contextualizan específicamente dentro del marco de las políticas de Trump. Cabe resaltar que la "fuerza" de los tópicos y el como de fuerte son las palabras que los componen siguen una distribución más plana generalmente que en el mandato de Obama.
+
+No se puede concluir que los temas dominantes en las noticias financieras durante la presidencia de Obama estén más enfocados en la recuperación económica post-crisis de 2008 ni que los temas dominantes durante la presidencia de Trump estén más relacionados con conflictos comerciales y políticas proteccionistas. Los temas hablan de temas más generales del mercado financiero y empresas particulares más que enfocarse en temas políticos o económicos específicos de cada presidencia.
 
 # Relación entre el sentimiento de las noticias y el precio de cierre de las acciones de Apple
 
