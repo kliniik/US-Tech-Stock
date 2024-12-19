@@ -42,6 +42,14 @@ Aunque el precio de las acciones cayó visiblemente, esto fue causado principalm
         
 No se han notado cayos relacionados con la presidencia de Donald Trump (lineas rojas).
 
+# Comparación de medias
+
+## Visualizaciones
+
+![bolsa](assets/imgs/plot_evolucion_bolsa_porcentaje.png)
+
+![sentimiento](assets/imgs/plot_evolucion_sentimientos.png)
+
 
 ## Relación con las Preguntas de Investigación
 
