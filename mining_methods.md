@@ -18,6 +18,7 @@ El texto se preprocesó siguiendo los siguientes pasos:
 - Se tokeniza el texto.
 - Todos los tokens considerados "stopwords" segun la lista del ingles del paquete `nltk` se eliminan.
 - Todos los tokens con longitud menor a 3 se eliminan.
+- Todos los tokens que sean un ticker que se esté analizando se elimina.
 - Los token resantes se lematizan.
 
 Los hiperparámetros probados son:
@@ -68,3 +69,25 @@ Se eligió esta técnica porque es la más ideal para la naturaleza de los titul
 
 ## Configuración de los algoritmos
 El notebook que hace el fine-tuning de LLama 2 usa pytorch, transformers, peft y pandas como principales librerías. Todos los parámetros de entrenamiento se pueden encontrar en el notebook en la celda con número de ejecución 15.
+
+# Tecnicas 4: Filtro de Hampel
+
+## Descripción de la Técnica:
+El filtro de Hampel es un método robusto para detectar y reemplazar valores atípicos en una serie de tiempo. Consiste en calcular la mediana de una ventana deslizante de tamaño fijo y comparar cada valor de la serie con la mediana. Si la diferencia entre el valor y la mediana es mayor que un umbral multiplicado por la desviación estándar de la serie, el valor se considera un valor atípico y se reemplaza por la mediana.
+
+## Justificación de la Técnica:
+El filtro de Hampel es una técnica robusta y eficiente para detectar valores atípicos en series de tiempo, lo cual es relevante para el análisis de datos financieros. Este filtro permite obtener una serie de puntos donde por alguna razón el mercado reaccionó de manera inusual, lo cual puede ser relevante la identificación de eventos importantes.
+
+## Configuración del Algoritmo:
+Para implementar el filtro de Hampel se utilizó la librería `pyhampel` de Python, que proporciona una implementación eficiente de este método. Se configuró la ventana a un tamaño de 10, lo cual permite detectar valores atípicos en función de los 5 valores anteriores y los 5 valores posteriores a cada punto de la serie. El umbral se estableció en 3 desviaciones estándar, lo cual es el valor por defecto de la librería y es un umbral comúnmente utilizado.
+
+# Tecnica 5: Modelado de Series Temporales
+
+## Descripción de la Técnica:
+Para analizar el rendimiento del stock de Apple y su relación con el sentimiento de noticias y tweets financieros, implementamos técnicas de modelado de series temporales como ARIMA (Autoregressive Integrated Moving Average), ARIMAX (ARIMA with Exogenous Variables) y MAX (Moving Average with Exogenous Variables). Usamos la serie temporal del precio de cierre del stock de Apple como variable principal.
+
+## Justificación de la Técnica:
+Los modelos elegidos son ampliamente utilizados en análisis financieros debido a su capacidad para capturar patrones temporales y modelar relaciones entre variables dependientes e independientes. ARIMA fue seleccionado como modelo base debido a su eficacia en la predicción de series temporales no estacionarias, como el precio de cierre del stock de Apple. ARIMAX se eligió para evaluar si el sentimiento de las noticias tiene un impacto significativo en el precio del stock, integrando datos estructurados y no estructurados. Finalmente, MAX se utilizó para explorar la posibilidad de una relación bidireccional entre el sentimiento y el rendimiento bursátil, profundizando en las dinámicas entre ambas variables.
+
+## Configuración del Algoritmo:
+Usamos las librerías statsmodels y pmdarima para implementar los modelos y evaluar métricas como MAE y RMSE, que sirvieron para comparar el desempeño de los distintos enfoques. En cuanto a los parámetros p, d y q, utilizamos la función auto_arima para determinar el modelo óptimo.
