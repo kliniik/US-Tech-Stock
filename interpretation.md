@@ -54,6 +54,7 @@ No se han notado cayos relacionados con la presidencia de Donald Trump (lineas r
 
 ![sentimiento_obama](assets/imgs/plot_evolucion_sentimientos_obama.png)
 
+## Las visualizaciones junto con los tests de Welch nos permiten afirmar la hipótesis número 1. En concreto, los sentimientos fueron un 108.26% más positivos durante el periodo Obama frente al periodo Trump.
 
 ## Relación con las Preguntas de Investigación
 
