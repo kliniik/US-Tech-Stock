@@ -1,27 +1,56 @@
-# Análisis del impacto del partido gobernante estadounidense en la imagen de las empresas tecnológicas en el mercado bursátil.
+# Analysis of the Impact of the U.S. Ruling Party on the Perception of Technology Companies in the Stock Market
 
-## Descripción del Proyecto:
+## Project Description
+This project aims to analyze whether the ruling U.S. party influences the public perception of technology companies in the stock market. We focus on two presidential terms:
+- Democratic Party – Barack Obama's presidency (2013–2017)
+- Republican Party – Donald Trump's presidency (2017–2020)
 
-El objetivo de nuestro proyecto es analizar si el partido gobernante puede influir en la imagen de las empresas tecnológicas en bolsa. 
+To explore this, we examine stock market trends—specifically NASDAQ index stocks—as well as sentiment in financial news and market-related tweets from 2012 to 2020.
 
-Queremos comprobar los datos del mandato del Partido Demócrata (presidencia de Barack Obama entre los años 2013 y 2017) y del Partido Republicano (presidencia de Donald Trump entre los años 2017 y 2020).
+**Note:** The project has been developed in Spanish.
 
-Para esto se estudiará el mercado bursátil, en concreto acciones del índice NASQAD y el sentimiento en noticias financieras y tweets de mercado entre los años 2012 al 2020.
+## Preliminary Hypothesis
+We hypothesize that the party in power has a significant impact on NASDAQ stock prices and public sentiment (as reflected in financial news and market-related tweets). This influence may be tied to major political events, policy changes and regulatory decisions.
 
-### Hipotesis preliminar:
+## Instructions for Replicating Experiments
+To replicate our analysis, follow these steps:
 
-Queremos comprobar si el partido gobernante puede influir principalente en los valores de las acciones del índice NASDAQ y el sentimiento en noticias financieras y tweets de mercado entre los años 2012 y 2020.
-  
-## Instrucciones para Reproducir los Experimentos:
+### 1. Collect Data:
+- Retrieve historical NASDAQ stock prices.
+- Gather financial news articles and market-related tweets.
 
-- Encontrar datos en el NASDAQ, quizá tweets o noticias financieras y datos bursátiles relevantes.
-- Filtrar los datos a los periodos de tiempo pertinentes durante la presidencia de cada candidato.
-- Formular hipótesis adecuadas.
-- Realizar el preprocesamiento correspondiente y crear un nuevo conjunto de datos, con el valor de cierre de la bolsa, las noticias sobre las empresas en cuestión y el sentimiento correspondiente asignado a las noticias.
-- Aplicar técnicas de minería de datos como LDA, análisis de sentimientos y análisis de series temporales.
-- Comprobar si los cambios en el sentimiento de la bolsa y las noticias están relacionados con acontecimientos importantes en el mundo de la política estadounidense.
-- Extraer conclusiones a partir de los resultados obtenidos como consecuencia de la minería de datos, consultar si se cumplen las hipótesis.
-  
-## Dependencias y Entorno: 
+### 2. Filter Data:
+Focus on data from the relevant time periods (Obama's and Trump's presidencies).
 
-Las librerías requeridas para recolectar los datos se encuentran en `data/requirements_data_recollection.txt` principalmente se ha usado la librería `yfinance`, `huggingface_hub` y `datasets` de Python.
+### 3. Formulate Hypotheses:
+Define key research questions based on potential political influence on stock performance and sentiment.
+
+### 4. Preprocess Data:
+Structure a dataset containing:
+  - Stock closing values
+  - Company-related news articles
+  - Sentiment analysis of news and tweets
+
+### 5. Apply Analytical Techniques:
+- Use Latent Dirichlet Allocation (LDA) for topic modeling.
+- Perform sentiment analysis on news articles and tweets.
+- Conduct time series analysis to track sentiment and stock fluctuations.
+
+### 6. Analyze Results:
+- Identify correlations between political events, stock trends, and sentiment shifts.
+- Test whether our hypotheses hold.
+
+## Dependencies and Environment
+To collect and process data, install the required libraries listed in:
+`data/requirements_data_recollection.txt`
+
+Key Python packages used:
+- `yfinance` – for retrieving stock data
+- `huggingface_hub` – for sentiment analysis models
+- `datasets` – for managing large-scale data
+
+Collaborators
+[Natalia Klinik](https://github.com/kliniik)  
+[Luis Gutiérrez Llamedo](https://github.com/luisgtez)  
+[Sergio González Suárez](https://github.com/sergioglezsuarez)  
+
