@@ -1,4 +1,4 @@
-# Analysis of the Impact of the U.S. Ruling Party on the Perception of Technology Companies in the Stock Market
+# Analysis of the effect of the US governing party on the stock market perception of technology companies
 
 ## Project Description
 This project aims to analyze whether the ruling U.S. party influences the public perception of technology companies in the stock market. We focus on two presidential terms:
